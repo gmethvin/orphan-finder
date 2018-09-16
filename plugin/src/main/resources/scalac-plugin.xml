@@ -1,0 +1,4 @@
+<plugin>
+  <name>orphan-finder-plugin</name>
+  <classname>io.methvin.orphanfinder.OrphanFinderPlugin</classname>
+</plugin>

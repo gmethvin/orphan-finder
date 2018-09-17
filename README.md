@@ -6,6 +6,17 @@ A Scala compiler plugin for finding orphan expressions in Scala code. An orphan 
 
 Currently, the implementation simply checks for statements within blocks matching the configured type(s). Note that this does not cover the cases already covered by the `-Ywarn-value-discard` compiler option.
 
+The `demo` module in this repository shows an example of warnings emitted. The output looks something like:
+
+```
+[warn] /Users/greg/projects/orphan-finder/demo/src/main/scala/io/methvin/orphanfinder/Demo.scala:12:11: Orphan scala.concurrent.Future found!
+[warn]     Future("hello")
+[warn]           ^
+[warn] /Users/greg/projects/orphan-finder/demo/src/main/scala/io/methvin/orphanfinder/Demo.scala:15:57: Orphan scala.concurrent.Future found!
+[warn]     Future(throw new RuntimeException("hello")).recover {
+[warn]                                                         ^
+```
+
 ## Usage
 
 To use this plugin, add the following to `build.sbt`:

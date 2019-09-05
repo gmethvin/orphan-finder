@@ -32,4 +32,4 @@ inThisBuild(Seq(
 ))
 ```
 
-where `orphanFinderVersion` is the version you wish to use. The latest is: [![Maven](https://img.shields.io/maven-central/v/io.methvin/orphan-finder_2.12.6.svg)](https://mvnrepository.com/artifact/io.methvin/orphan-finder).
+where `orphanFinderVersion` is the version you wish to use. The latest is: [![Maven](https://img.shields.io/maven-central/v/io.methvin/orphan-finder_2.13.0.svg)](https://mvnrepository.com/artifact/io.methvin/orphan-finder).

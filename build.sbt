@@ -11,7 +11,7 @@ inThisBuild(
     developers := List(
       Developer("gmethvin", "Greg Methvin", "greg@methvin.net", new URL("https://github.com/gmethvin"))
     ),
-    crossScalaVersions := Seq("2.12.6", "2.13.0-M5"),
+    crossScalaVersions := Seq("2.13.0", "2.12.9"),
     scalaVersion := crossScalaVersions.value.head,
     scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked", "-Xlint"),
     dynverSonatypeSnapshots := true,

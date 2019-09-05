@@ -32,7 +32,7 @@ class OrphanFinderPlugin(val global: Global) extends Plugin {
   private final val ClassOptionPrefix = "class:"
   private val classNames: mutable.ArrayBuffer[String] = mutable.ArrayBuffer()
 
-  override def processOptions(options: List[String], error: String => Unit): Unit = {
+  override def init(options: List[String], error: String => Unit): Boolean = {
     for (option <- options) {
       if (option startsWith ClassOptionPrefix) {
         classNames += option stripPrefix ClassOptionPrefix
@@ -40,6 +40,7 @@ class OrphanFinderPlugin(val global: Global) extends Plugin {
         error(s"Option not understood: $option")
       }
     }
+    true
   }
 
   override val optionsHelp: Option[String] = Some(

@@ -4,8 +4,8 @@ jdk: openjdk8
 script:
   - sbt test
 scala:
-  - 2.12.9
-  - 2.13.0
+  - 2.12.10
+  - 2.13.1
 before_cache:
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2/cache -name "ivydata-*.properties" | xargs rm
